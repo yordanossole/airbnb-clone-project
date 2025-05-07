@@ -168,12 +168,6 @@ To protect sensitive data and ensure system integrity, the following security me
 
 ---
 
-### Security Tools Used
-- **Django-allauth**: OAuth2 integration for social logins.  
-- **django-cors-headers**: Manages CORS policies.  
-- **Helmet.js** (if using Node.js middleware): Sets secure HTTP headers.
-
-
 ## CI/CD Pipeline
 
 ### What is CI/CD?
@@ -200,8 +194,3 @@ To protect sensitive data and ensure system integrity, the following security me
    - Tools like Sentry or New Relic track errors in production.  
 
 ---
-
-### Example Pipeline Stages
-```yaml
-1. Code Push → 2. Run Tests → 3. Build Docker Image → 4. Deploy to Staging → 5. Manual Approval → 6. Production Rollout
-```
