@@ -1,13 +1,36 @@
 # airbnb-clone-project
+- The Airbnb Clone Project is a comprehensive, real-world application designed to simulate the development of a robust booking platform like Airbnb.
+- Airbnb is a web-based platform, where travellers can find and book short-term rentals all over the world. [Airbnb](https://www.airbnb.com/)
 
 ## Team Roles
-### 1. Backend Developer
-- **Description**: Focuses on server-side logic, APIs, and integration with databases/services.
-- **Responsibilities**:
-  - Develops and maintains the core application logic.
-  - Implements security and data protection measures.
-  - Optimizes performance and scalability.
- 
+### 1. Business analyst (BA)
+- Understands customer’s business processes
+
+- Translates customer business needs into requirements
+
+### 2. Product owner (PO)
+- Holds responsibility for a product vision and evolution
+
+- Makes sure the final product meets customer requirements
+
+### 3. Project manager (PM)
+- Makes sure a product or its part is delivered on time and within budget
+
+- Manages and motivates the software development team
+
+### 4. Software architect
+- Designs a high-level software architecture
+
+- Selects appropriate tools and platforms to implement the product vision
+
+- Sets up code quality standards and performs code reviews
+
+### 5. Backend Developer
+- Focuses on server-side logic, APIs, and integration with databases/services.
+- Develops and maintains the core application logic.
+- Implements security and data protection measures.
+- Optimizes performance and scalability.
+
 ### 2. Technology Stack
 - **Technologies**: Django, PostgreSQL, GraphQL
 - **Django**  
