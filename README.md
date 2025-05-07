@@ -2,6 +2,8 @@
 - The Airbnb Clone Project is a comprehensive, real-world application designed to simulate the development of a robust booking platform like Airbnb.
 - Airbnb is a web-based platform, where travellers can find and book short-term rentals all over the world. [Airbnb](https://www.airbnb.com/)
 
+---
+
 ## Team Roles
 ### 1. Business analyst (BA)
 - Understands customer’s business processes
@@ -40,6 +42,8 @@
 - Redis: Used for caching and session management.
 - Docker: Containerization tool for consistent development and deployment environments.
 - CI/CD Pipelines: Automated pipelines for testing and deploying code changes.
+
+---
 
 ## Database Design
 
@@ -83,50 +87,47 @@ The database schema consists of the following entities and relationships:
   - One-to-One with `Booking` (A payment corresponds to one booking).  
 
 ---
+## 🛠️ Features Breakdown
+1. **API Documentation**
+- **OpenAPI Standard:** The backend APIs are documented using the OpenAPI standard to ensure clarity and ease of integration.
+- **Django REST Framework:** Provides a comprehensive RESTful API for handling CRUD operations on user and property data.
+- **GraphQL:** Offers a flexible and efficient query mechanism for interacting with the backend.
 
-### Schema Diagram (Conceptual)
-```plaintext
-User ────┐
-  │      │
-  ├─ Property ──── Booking ─── Payment
-  │        │
-  └── Review
-```
-## Feature Breakdown
+2. **User Authentication**
+- **Endpoints:** /users/, /users/{user_id}/
+- **Features:** Register new users, authenticate, and manage user profiles.
+  - Allows users to register, log in, and manage profiles (hosts/guests).  
+  - Implements JWT authentication for secure access and role-based permissions (e.g., hosts can list properties).  
 
-### 1. **User Management**
-- Allows users to register, log in, and manage profiles (hosts/guests).  
-- Implements JWT authentication for secure access and role-based permissions (e.g., hosts can list properties).  
+3. **Property Management**
+- **Endpoints:** /properties/, /properties/{property_id}/
+- **Features:** Create, update, retrieve, and delete property listings.
+  - Enables hosts to create, update, and delete property listings with details (photos, pricing, amenities).  
+  - Includes search/filter functionality (e.g., by location, price range) for guests. 
 
-### 2. **Property Management**
-- Enables hosts to create, update, and delete property listings with details (photos, pricing, amenities).  
-- Includes search/filter functionality (e.g., by location, price range) for guests.  
+4. **Booking System**
+- **Endpoints:** /bookings/, /bookings/{booking_id}/
+- **Features:** Make, update, and manage bookings, including check-in and check-out details.
+  - Handles reservation workflows: availability checks, date selection, and payment integration.  
+  - Sends confirmation emails and updates booking status (confirmed/pending/cancelled). 
 
-### 3. **Booking System**
-- Handles reservation workflows: availability checks, date selection, and payment integration.  
-- Sends confirmation emails and updates booking status (confirmed/pending/cancelled).  
+5. **Payment Processing**
+- **Endpoints:** /payments/
+- **Features:** Handle payment transactions related to bookings.
+  - Integrates with Stripe/PayPal for secure transactions.  
+  - Calculates totals (including fees) and refunds cancellations per policy.  
 
-### 4. **Reviews & Ratings**
-- Lets guests leave ratings and reviews for properties post-stay.  
-- Displays aggregate scores on property listings to build trust.  
+6. **Review System**
+- **Endpoints:** /reviews/, /reviews/{review_id}/
+- **Features:** Post and manage reviews for properties.
+  - Lets guests leave ratings and reviews for properties post-stay.  
+  - Displays aggregate scores on property listings to build trust. 
 
-### 5. **Payment Processing**
-- Integrates with Stripe/PayPal for secure transactions.  
-- Calculates totals (including fees) and refunds cancellations per policy.  
+7. **Database Optimizations**
+- **Indexing:** Implement indexes for fast retrieval of frequently accessed data.
+- **Caching:** Use caching strategies to reduce database load and improve performance.
 
-### 6. **Messaging System**
-- Facilitates communication between guests and hosts via real-time chat.  
-- Notifies users of new messages via email or in-app alerts.  
-
-### 7. **Admin Dashboard**
-- Provides moderators with tools to manage users, properties, and resolve disputes.  
-- Generates reports (e.g., revenue, popular locations) for business insights.  
-
----
-
-### Upcoming Features (Optional)
-- **Wishlists**: Save favorite properties for future bookings.  
-- **Smart Pricing**: AI-driven price suggestions for hosts.  
+--- 
 
 ## API Security
 
