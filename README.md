@@ -87,7 +87,7 @@ The database schema consists of the following entities and relationships:
   - One-to-One with `Booking` (A payment corresponds to one booking).  
 
 ---
-## 🛠️ Features Breakdown
+## Feature Breakdown
 1. **API Documentation**
 - **OpenAPI Standard:** The backend APIs are documented using the OpenAPI standard to ensure clarity and ease of integration.
 - **Django REST Framework:** Provides a comprehensive RESTful API for handling CRUD operations on user and property data.
